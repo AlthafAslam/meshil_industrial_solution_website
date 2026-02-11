@@ -1,0 +1,186 @@
+.header {
+    padding: 6rem 0 4rem;
+    background-color: white;
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.section {
+    padding: 6rem 0;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.valuesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.valueCard {
+    text-align: center;
+    padding: 2rem;
+}
+
+.valueIcon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    background: var(--light-gray);
+    width: 80px;
+    height: 80px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.valueTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.statsSection {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4rem 0;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.statNumber {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.statLabel {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: var(--border-color);
+    transform: translateX(-50%);
+}
+
+.timelineItem {
+    margin-bottom: 4rem;
+    position: relative;
+    width: 50%;
+}
+
+.timelineItem:nth-child(odd) {
+    left: 0;
+    padding-right: 3rem;
+    text-align: right;
+}
+
+.timelineItem:nth-child(even) {
+    left: 50%;
+    padding-left: 3rem;
+}
+
+.timelineYear {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.timelineContent h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.timelineDot {
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 0 0 1px var(--border-color);
+}
+
+.timelineItem:nth-child(odd) .timelineDot {
+    right: -10px;
+}
+
+.timelineItem:nth-child(even) .timelineDot {
+    left: -10px;
+}
+
+.quoteSection {
+    background-color: #f9f9f9;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.quote {
+    font-size: 2rem;
+    font-style: italic;
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    color: var(--secondary-color);
+    line-height: 1.4;
+}
+
+.author {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timelineItem {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 50px !important;
+        padding-right: 0 !important;
+        text-align: left !important;
+    }
+
+    .timelineDot {
+        left: 10px !important;
+        right: auto !important;
+    }
+}
