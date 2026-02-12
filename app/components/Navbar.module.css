@@ -27,7 +27,8 @@
     justify-content: center;
     width: 80px;
     height: 80px;
-    background-color: var(--accent-color);
+    /* background-color: var(--accent-color); */
+    background: linear-gradient(135deg, var(--accent-color) 0%, #f59e0b 100%);
     padding: 0.75rem;
     /* 12px */
     border-radius: var(--radius-md);
