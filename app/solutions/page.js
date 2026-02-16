@@ -76,47 +76,7 @@ export default function Solutions() {
         'Logistics & Warehousing'
     ];
 
-    const automationAndFieldInstrumentation = [
-        'Cooling Towers',
-        'Air Handling Units',
-        'Pumps & Motors',
-        'Valves & Actuators',
-        'Flow Meters',
-        'Level Transmitters',
-        'Pressure Transmitters',
-        'Temperature Sensors',
-        'Control Panels',
-        'SCADA Systems',
-        'PLC Programming',
-        'HMI Development',
-        'Safety Systems',
-        'Robotic Automation',
-        'Vision Systems',
-        'Data Acquisition',
-        'Remote Monitoring',
-        'System Integration',
-        'Maintenance & Support',
-        'Spare Parts Management',
-        'Remote Diagnostics'
-    ];
-
-    const commercialSolutions = [
-        'Raised access floors',
-        'Fire Alarm Systems',
-        'Security Systems',
-        'Industrial lighting',
-        'Modular office systems',
-        'Cable Management Systems',
-        'HVLC fans',
-        'Smart access control',
-        'CCTV Systems',
-        'Data Center Solutions',
-        'Electrical Solutions',
-        'Plumbing Solutions',
-        'Maintenance & Support',
-        'Spare Parts Management',
-        'Remote Diagnostics'
-    ];
+    const { automationAndFieldInstrumentation, commercialSolutions } = require('../lib/solutionsData');
 
     return (
         <>
@@ -196,10 +156,10 @@ export default function Solutions() {
 
                     <div className={styles.industries}>
                         {automationAndFieldInstrumentation.map((industry, index) => (
-                            <div key={index} className={styles.industryTag}>
+                            <Link key={index} href={`/solutions/${industry.slug}`} className={styles.industryTag} style={{ textDecoration: 'none', color: 'inherit' }}>
                                 <span ><p> ✓</p></span>
-                                {industry}
-                            </div>
+                                {industry.title}
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -213,11 +173,11 @@ export default function Solutions() {
                     </p> */}
                     <div className={styles.industries}>
                         {commercialSolutions.map((industry, index) => (
-                            <div key={index} className={styles.industryTag}>
+                            <Link key={index} href={`/solutions/${industry.slug}`} className={styles.industryTag} style={{ textDecoration: 'none', color: 'inherit' }}>
                                 {/* <span className="material-icons-outlined">factory</span> */}
                                 <span><p>✦</p></span>
-                                {industry}
-                            </div>
+                                {industry.title}
+                            </Link>
                         ))}
                     </div>
                 </div>

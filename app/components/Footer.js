@@ -28,7 +28,7 @@ export default function Footer() {
                 </div>
                 <div className={styles.column}>
                     <h4 className={styles.columnTitle}>Contact</h4>
-                    <p className={styles.footerText}>Industrial Area Phase 2,<br />Riyadh, Saudi Arabia</p>
+                    <p className={styles.footerText}>Al Khobar<br />Dammam, Saudi Arabia</p>
                     <p className={styles.footerText}>+966 11 000 0000</p>
                 </div>
             </div>

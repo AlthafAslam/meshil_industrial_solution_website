@@ -185,6 +185,7 @@
     font-size: 2.25rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
+    color: var(--text-light);
 }
 
 .ctaText {
