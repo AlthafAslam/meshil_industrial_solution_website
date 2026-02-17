@@ -1,10 +1,16 @@
-'use client';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getSolutionBySlug } from '../../lib/solutionsData';
-import { openWhatsAppQuote } from '../../utils/whatsapp';
+import { getSolutionBySlug, automationAndFieldInstrumentation, commercialSolutions } from '../../lib/solutionsData';
+import WhatsAppButton from '../../components/WhatsAppButton';
 import styles from '../solutions.module.css';
+
+export async function generateStaticParams() {
+    const allSolutions = [...automationAndFieldInstrumentation, ...commercialSolutions];
+    return allSolutions.map((solution) => ({
+        slug: solution.slug,
+    }));
+}
 
 export default function SolutionDetail({ params }) {
     const { slug } = params;
@@ -44,15 +50,11 @@ export default function SolutionDetail({ params }) {
                             We provide top-tier {solution.title.toLowerCase()} services tailored to your industrial needs, ensuring efficiency, safety, and reliability. Contact us today for a customized quote.
                         </p>
 
-                        <button
-                            onClick={() => openWhatsAppQuote(solution.title)}
-                            className="btn btn-primary"
-                        >
-                            Get A Quote <span className="material-icons-outlined">whatsapp</span>
-                        </button>
+                        <WhatsAppButton title={solution.title} className="btn btn-primary" />
                     </div>
                 </div>
             </div>
         </section>
     );
 }
+
